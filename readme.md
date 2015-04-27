@@ -37,6 +37,18 @@ The default for a post from the REST API fetch all data in `/wp-json/posts`. Thi
 }
 ```
 
+#### Result for comments, `wp-json/posts/1/comments?items=ID,post`
+```json
+[
+  {
+    "ID": 2,
+    "post": 1,
+    "author": {...}
+  },
+  {...}
+]
+```
+
 ## Requirements
  * PHP 5.4
  * WordPress 4.*
