@@ -19,7 +19,7 @@ function init_requisite( $dir ) {
 		if ( ! is_readable( $requisite ) ) {
 			return FALSE;
 		}
-		/** @define "$requisite" "lib\Requisite\Requisite.php" */
+
 		require_once $requisite;
 	}
 
