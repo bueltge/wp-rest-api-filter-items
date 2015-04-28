@@ -14,11 +14,12 @@ use Requisite;
 function init_requisite( $dir ) {
 
 	if ( ! class_exists( '\Requisite\SPLAutoLoader' ) ) {
+
 		$requisite = $dir . '/Requisite/Requisite.php';
 		if ( ! is_readable( $requisite ) ) {
 			return FALSE;
 		}
-
+		/** @define "$requisite" "lib\Requisite\Requisite.php" */
 		require_once $requisite;
 	}
 

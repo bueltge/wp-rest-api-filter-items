@@ -2,6 +2,8 @@
 
 namespace RestApiFilterItems\Items;
 
+use RestApiFilterItems\Core\Filter;
+
 class Taxonomy implements TypeInterface {
 
 	/**
@@ -23,7 +25,7 @@ class Taxonomy implements TypeInterface {
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new \RestApiFilterItems\Core\Filter( $data );
+		$filtered_data = new Filter( $data );
 
 		return $filtered_data->filter_data( $data );
 	}

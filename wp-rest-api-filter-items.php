@@ -2,16 +2,19 @@
 
 /**
  * Plugin Name:  WP REST API Filter Items
- * Description:
- * Version:
+ * Description:  This plugin filter the WP REST API items on your request.
+ * Version:      2015-04-28
  * Plugin URI:   https://github.com/bueltge/WP-REST-API-Filter-Items
  * Author:       Frank Bültge
  * Author URI:   http://bueltge.de/
- * Licence:      GPLv2
+ * Licence:      GPLv2+
  */
 
 namespace RestApiFilterItems;
 
+/**
+ * @param $file
+ */
 $file_loader = function ( $file ) {
 
 	require_once __DIR__ . '/inc/' . $file;

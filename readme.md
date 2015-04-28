@@ -1,6 +1,6 @@
 # WP REST API Filter Items
 
-A WordPress plugin that filter [WP REST API](http://wp-api.org/) items to your requirement.
+A WordPress plugin that filter [WP REST API](http://wp-api.org/) items on your request.
 
 ## Description
 The default for a post from the REST API fetch all data in `/wp-json/posts`. This plugin give you the chance to filter for the required fields. Add the items to  `GET` attribute on the url, like `wp-json/posts?items=ID,title,content` and you get only this fields.
