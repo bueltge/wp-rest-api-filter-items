@@ -50,7 +50,7 @@ class Filter implements FilterInterface {
 				$filtered_data[ $key ] = $value;
 			}
 		}
-		
+
 		return $filtered_data;
 	}
 }

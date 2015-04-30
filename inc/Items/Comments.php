@@ -13,6 +13,9 @@ class Comments implements TypeInterface {
 	 */
 	public function __construct() {
 
+		if ( ! isset( $_GET[ 'items' ] ) ) {
+			return NULL;
+		}
 		add_filter( 'json_prepare_comment', [ $this, 'filter_data' ], 10, 1 );
 	}
 
