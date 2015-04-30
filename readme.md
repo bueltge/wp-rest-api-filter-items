@@ -19,7 +19,7 @@ The default for a post from the REST API fetch all data in `/wp-json/posts`. Thi
 ]
 ```
 
-#### Result for taxonomy, `wp-json/posts?items=name,slug`.
+#### Result for taxonomy, `wp-json/taxonomies/category?items=name,slug`.
 ```json
 {
   "name": "Categories",
