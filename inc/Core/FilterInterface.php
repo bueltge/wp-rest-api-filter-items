@@ -4,9 +4,7 @@ namespace RestApiFilterItems\Core;
 interface FilterInterface {
 
 	/**
-	 * @param $data
-	 *
 	 * @return mixed
 	 */
-	public function filter_data( $data );
+	public function filter_data();
 }

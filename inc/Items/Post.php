@@ -13,7 +13,7 @@ class Post implements TypeInterface {
 	 */
 	public function __construct() {
 
-		add_filter( 'json_prepare_post', [ $this, 'filter_data' ], 10, 1 );
+		add_filter( 'json_prepare_post', [ $this, 'filter_data' ] , 10, 1 );
 	}
 
 	/**
@@ -25,8 +25,8 @@ class Post implements TypeInterface {
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new Filter( $data );
+		$filtered_data = new Filter( $_GET[ 'items' ], $data );
 
-		return $filtered_data->filter_data( $data );
+		return $filtered_data->filter_data();
 	}
-} 
+}

@@ -5,30 +5,52 @@ namespace RestApiFilterItems\Core;
 class Filter implements FilterInterface {
 
 	/**
+	 * @type string
+	 */
+	private $request;
+
+	/**
+	 * @type array
+	 */
+	private $data;
+
+	/**
+	 * Set var
+	 *
+	 * @param array $request
+	 * @param array $data
+	 */
+	public function __construct( $request, array $data ) {
+
+		$this->request = $request;
+		$this->data    = $data;
+	}
+
+	/**
 	 * Filter data to get attributes items
 	 *
-	 * @param $data
-	 *
 	 * @return array
+	 * @internal param $data
 	 */
-	public function filter_data( $data ) {
+	public function filter_data() {
 
-		if ( empty( $_GET[ 'items' ] ) ) {
-			return $data;
+		if ( empty( $this->request ) ) {
+			return $this->data;
 		}
 
-		$items = explode( ',', $_GET[ 'items' ] );
+		$items = explode( ',', $this->request );
 		if ( empty( $items ) || 0 === count( $items ) ) {
-			return $data;
+			return $this->data;
 		}
 
 		$filtered_data = array();
-		foreach ( $data as $key => $value ) {
+		foreach ( $this->data as $key => $value ) {
+
 			if ( in_array( $key, $items ) ) {
 				$filtered_data[ $key ] = $value;
 			}
 		}
-
+		
 		return $filtered_data;
 	}
-} 
+}

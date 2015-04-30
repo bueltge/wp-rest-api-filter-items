@@ -25,8 +25,8 @@ class Taxonomy implements TypeInterface {
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new Filter( $data );
+		$filtered_data = new Filter( $_GET[ 'items' ], $data );
 
-		return $filtered_data->filter_data( $data );
+		return $filtered_data->filter_data();
 	}
 }
