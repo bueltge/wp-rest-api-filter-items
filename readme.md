@@ -9,6 +9,7 @@ The default for a post from the REST API fetch all data in `/wp-json/posts`. Thi
  * Use the branch [`wp-api-v1`](tree/wp-api-v1) if you use WP-API Version 1*
  * The `master` branch is for developing, currently refactoring for WP API Version 2*
 
+## Examples
 #### Result for post, `wp-json/posts?items=ID,title,content`
 ```json
 [
