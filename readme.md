@@ -58,6 +58,7 @@ The default for a post from the REST API fetch all data in `/wp-json/posts`. Thi
 ## Requirements
  * PHP 5.4
  * WordPress 4.*
+ * WP REST API
 
 ## Kudos
 Thanks a lot to D.Naber for his [Requiste Autoload](https://github.com/dnaber-de/Requisite).
