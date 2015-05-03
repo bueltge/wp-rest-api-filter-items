@@ -1,25 +1,27 @@
 <?php # -*- coding: utf-8 -*-
 
 namespace RestApiFilterItems\Test\Unit;
-use RestApiFilterItems\Core;
+
+use RestApiFilterItems\Core\Filter;
 
 class FilterTest extends \PHPUnit_Framework_TestCase {
 
 	/**
-	 * @dataProvider filter_data_provider
+	 * @dataProvider    filter_data_provider
+	 *
 	 * @param array $data
 	 * @param array $request
 	 * @param array $expected_data
 	 */
 	public function test_filter_data( array $data, array $request, array $expected_data ) {
 
-		$testee = new Core\Filter;
-
 		// this can be removed when Core\Filter is refactored
 		// $request would then just passed to the constructor of Core\Filter
-		$_GET[ 'items' ] = $request[ 'items' ];
+		$request = $request[ 'items' ];
 
-		$filtered_data = $testee->filter_data( $data );
+		$testee = new Filter( $request, $data );
+
+		$filtered_data = $testee->filter_data();
 
 		$this->assertEquals(
 			$expected_data,
@@ -40,16 +42,16 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
 		 * test function.
 		 */
 
-		$data = [];
+		$data = [ ];
 
 		#0:
-		$data[] = [
+		$data[ ] = [
 			#1. Parameter $data
 			[
-				'ID'     => '42',
-				'title'  => 'Lorem Ipsum',
-				'status' => 'publish',
-				'author' => [
+				'ID'           => '42',
+				'title'        => 'Lorem Ipsum',
+				'status'       => 'publish',
+				'author'       => [
 					'name' => 'Jon Doe',
 					'url'  => 'http://foo.bar/author/jd'
 				],
@@ -63,20 +65,20 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
 			],
 			#3. Parameter $expected_data
 			[
-				'ID'     => '42',
-				'status' => 'publish',
-				'content'      => 'Lorem Ipsum dolor sit amet …',
+				'ID'      => '42',
+				'status'  => 'publish',
+				'content' => 'Lorem Ipsum dolor sit amet …',
 			]
 		];
 
 		#1:
-		$data[] = [
+		$data[ ] = [
 			#1. Parameter $data
 			[
-				'ID'     => '42',
-				'title'  => 'Lorem Ipsum',
-				'status' => 'publish',
-				'author' => [
+				'ID'           => '42',
+				'title'        => 'Lorem Ipsum',
+				'status'       => 'publish',
+				'author'       => [
 					'name' => 'Jon Doe',
 					'url'  => 'http://foo.bar/author/jd'
 				],
@@ -89,7 +91,7 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
 				'items' => 'Fields,that,actually,not,exist'
 			],
 			#3. Parameter $expected_data
-			[]
+			[ ]
 		];
 
 		/**
@@ -99,4 +101,3 @@ class FilterTest extends \PHPUnit_Framework_TestCase {
 		return $data;
 	}
 }
- 

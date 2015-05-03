@@ -7,6 +7,11 @@ use RestApiFilterItems\Core\Filter;
 class Comments implements TypeInterface {
 
 	/**
+	 * @type string
+	 */
+	private $request;
+
+	/**
 	 * Constructor
 	 * Run in WordPress context
 	 *
@@ -16,6 +21,9 @@ class Comments implements TypeInterface {
 		if ( ! isset( $_GET[ 'items' ] ) ) {
 			return NULL;
 		}
+
+		$this->request = $_GET[ 'items' ];
+
 		add_filter( 'json_prepare_comment', [ $this, 'filter_data' ], 10, 1 );
 	}
 
@@ -28,7 +36,7 @@ class Comments implements TypeInterface {
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new Filter( $_GET[ 'items' ], $data );
+		$filtered_data = new Filter( $this->request, $data );
 
 		return $filtered_data->filter_data();
 	}
