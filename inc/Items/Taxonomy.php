@@ -24,7 +24,7 @@ class Taxonomy implements TypeInterface {
 
 		$this->request = $_GET[ 'items' ];
 
-		add_filter( 'json_prepare_taxonomy', [ $this, 'filter_data' ], 10, 1 );
+		add_filter( 'rest_prepare_taxonomy', [ $this, 'filter_data' ], 10, 1 );
 	}
 
 	/**
@@ -36,7 +36,8 @@ class Taxonomy implements TypeInterface {
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new Filter( $this->request, $data );
+		$_data = $data->data;
+		$filtered_data = new Filter( $this->request, $_data );
 
 		return $filtered_data->filter_data();
 	}

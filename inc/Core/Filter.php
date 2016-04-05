@@ -28,7 +28,7 @@ class Filter implements FilterInterface {
 
 	/**
 	 * Filter data to get attributes items
-	 * 
+	 *
 	 * @return array
 	 */
 	public function filter_data() {
@@ -38,14 +38,14 @@ class Filter implements FilterInterface {
 		}
 
 		$items = explode( ',', $this->request );
-		if ( empty( $items ) || 0 === count( $items ) ) {
+		if ( 0 === count( $items ) ) {
 			return $this->data;
 		}
 
 		$filtered_data = array();
 		foreach ( $this->data as $key => $value ) {
 
-			if ( in_array( $key, $items ) ) {
+			if ( in_array( $key, $items, TRUE ) ) {
 				$filtered_data[ $key ] = $value;
 			}
 		}

@@ -29,19 +29,20 @@ class Post implements TypeInterface {
 
 		$this->request = $_GET[ 'items' ];
 
-		add_filter( 'json_prepare_post', [ $this, 'filter_data' ], 10, 1 );
+		add_filter( 'rest_prepare_post', [ $this, 'filter_data' ], 12, 1 );
 	}
 
 	/**
 	 * Filter data to get attributes items
 	 *
-	 * @param $data
+	 * @param  $data
 	 *
 	 * @return array
 	 */
 	public function filter_data( $data ) {
 
-		$filtered_data = new Filter( $this->request, $data );
+		$_data = $data->data;
+		$filtered_data = new Filter( $this->request, $_data );
 
 		return $filtered_data->filter_data();
 	}
