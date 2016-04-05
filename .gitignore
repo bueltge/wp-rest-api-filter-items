@@ -1,0 +1,22 @@
+## PhpStorm
+## Directory-based project format
+.idea/
+.idea/*
+
+## File-based project format
+*.ipr
+*.iws
+*.iml
+
+## Additional for IntelliJ
+out/
+
+## Grunt, NPM
+node_modules/
+
+## Windows
+# Windows image file caches
+Thumbs.db
+
+# Folder config file
+Desktop.ini
