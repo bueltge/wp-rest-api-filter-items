@@ -28,9 +28,8 @@ class Filter implements FilterInterface {
 
 	/**
 	 * Filter data to get attributes items
-	 *
+	 * 
 	 * @return array
-	 * @internal param $data
 	 */
 	public function filter_data() {
 

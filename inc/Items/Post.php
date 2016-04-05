@@ -24,7 +24,7 @@ class Post implements TypeInterface {
 	public function __construct() {
 
 		if ( ! isset( $_GET[ 'items' ] ) ) {
-			return NULL;
+			return;
 		}
 
 		$this->request = $_GET[ 'items' ];
