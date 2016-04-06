@@ -1,7 +1,6 @@
 # WP REST API Filter Items
 
-A WordPress plugin to filter [WordPress REST API](http://wp-api.org/) items for your request.
-Removing Content From WP API Response on your request.
+A WordPress plugin to filter [WordPress REST API](http://wp-api.org/) items for your request. Removing Content From WP API Response on your request.
 
 ## Description
 Per default, a post via WordPress REST API would fetch all data in `wp-json/wp/v2/posts`. For many reasons you might want to exclude certain fields from WP API response in certain circumstances. This plugin enables you to filter your request for fields you require. Add items to the `GET` attribute on the url, like `wp-json/wp/v2/posts?items=id,title,content` in order to get only according field values.
