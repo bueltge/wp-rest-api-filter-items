@@ -1,0 +1,22 @@
+{
+  "name": "inpsyde/WP-REST-API-Filter-Items",
+  "description": "Removing Content From WP API Response on your request.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0",
+  "authors": [
+    {
+      "name": "Inpsyde GmbH",
+      "email": "hello@inpsyde.com",
+      "homepage": "http://inpsyde.com",
+      "role": "Company"
+    }
+  ],
+  "require": {
+    "php": ">=5.2.4",
+    "composer/installers": "~1.0"
+  },
+  "require-dev": {
+    "php": ">=5.3.3",
+    "phpunit/phpunit": "~4.8|~5.1"
+  }
+}
