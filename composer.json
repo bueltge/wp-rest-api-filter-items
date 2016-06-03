@@ -1,5 +1,5 @@
 {
-  "name": "bueltge/WP-REST-API-Filter-Items",
+  "name": "bueltge/wp-rest-api-filter-items",
   "description": "Removing Content From WP API Response on your request.",
   "type": "wordpress-plugin",
   "license": "GPL-3.0",
