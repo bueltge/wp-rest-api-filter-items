@@ -1,5 +1,5 @@
 # WP REST API Filter Items
-[![Code Climate](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items/badges/gpa.svg)](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items) [![License](https://poser.pugx.org/bueltge/wp-rest-api-filter-items/license)](https://packagist.org/packages/bueltge/wp-rest-api-filter-items)
+[![Build Status](https://travis-ci.org/bueltge/wp-rest-api-filter-items.svg?branch=master)](https://travis-ci.org/bueltge/wp-rest-api-filter-items) [![Code Climate](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items/badges/gpa.svg)](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items) [![License](https://poser.pugx.org/bueltge/wp-rest-api-filter-items/license)](https://packagist.org/packages/bueltge/wp-rest-api-filter-items)
 
 A WordPress plugin to filter [WordPress REST API](http://wp-api.org/) items for your request. Removing Content From WP API Response on your request.
 
