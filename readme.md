@@ -10,7 +10,7 @@ The plugin supports currently the filtering of post, taxonomy and comments.
 
 ## WP-API Versions
  * __Use the branch [`wp-api-v1`](tree/wp-api-v1) if you use WP-API Version 1.__
- * The `master` branch is for development, currently refactoring for WP API Version 2.
+ * The **`master` branch** is for development, currently ready and open for feature requests for the **WP API Version 2**.
 
 ## Examples
 #### Result for post: `wp-json/wp/v2/posts?_wp_json_nonce=4355d0c4b3&items=id,title,content`
