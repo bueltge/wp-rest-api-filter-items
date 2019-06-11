@@ -3,8 +3,9 @@
 namespace RestApiFilterItems\Test\Unit;
 
 use RestApiFilterItems\Core\Filter;
+use PHPUnit\Framework\TestCase;
 
-class FilterTest extends \PHPUnit_Framework_TestCase {
+class FilterTest extends TestCase {
 
 	/**
 	 * @dataProvider    filter_data_provider
