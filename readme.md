@@ -14,6 +14,7 @@ The plugin supports currently the filtering of post, taxonomy and comments.
 
 ## Installation
 Install static via download, clone the repository or use dependency management via Composer
+
 `composer require bueltge/wp-rest-api-filter-items`
 
 ## Examples
