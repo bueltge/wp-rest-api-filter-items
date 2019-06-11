@@ -3,7 +3,7 @@
 /**
  * Plugin Name:  WP REST API Filter Items
  * Description:  Removing Content From WP API Response on your request.
- * Version:      2016-04-06
+ * Version:      1.0.0
  * Plugin URI:   https://github.com/bueltge/WP-REST-API-Filter-Items
  * Author:       Frank Bültge
  * Author URI:   http://bueltge.de/
