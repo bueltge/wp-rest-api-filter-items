@@ -7,7 +7,7 @@
  * Plugin URI:   https://github.com/bueltge/WP-REST-API-Filter-Items
  * Author:       Frank Bültge
  * Author URI:   http://bueltge.de/
- * Licence:      GPLv3+
+ * Licence:      GPLv2+
  */
 
 namespace RestApiFilterItems;
