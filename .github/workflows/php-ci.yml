@@ -20,6 +20,9 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
 
+    - name: Run QA Scripts from composer.json
+      run: composer qa
+
     - name: PHPUnit (php-actions)
       uses: php-actions/phpunit@v1
       with:
