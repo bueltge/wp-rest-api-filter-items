@@ -22,9 +22,3 @@ jobs:
 
     - name: Run QA Scripts from composer.json
       run: composer qa
-
-    - name: PHPUnit (php-actions)
-      uses: php-actions/phpunit@v1
-      with:
-        # Configuration file location
-        config: ./phpunit.xml.dist
