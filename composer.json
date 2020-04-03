@@ -18,5 +18,13 @@
   "require-dev": {
     "php": ">=5.3.3",
     "phpunit/phpunit": "~4.8|~5.7"
+  },
+  "config": {
+    "optimize-autoloader": true
+  },
+  "scripts": {
+    "cs": "@php ./vendor/squizlabs/php_codesniffer/bin/phpcs",
+    "pu": "@php ./vendor/bin/phpunit",
+    "qa": ["@pu"]
   }
 }
