@@ -2,12 +2,12 @@
 [![Unit Tests](https://github.com/bueltge/wp-rest-api-filter-items/workflows/PHP%20Unit%20Tests/badge.svg)](https://github.com/bueltge/wp-rest-api-filter-items/actions)
 [![Build Status](https://travis-ci.org/bueltge/wp-rest-api-filter-items.svg?branch=master)](https://travis-ci.org/bueltge/wp-rest-api-filter-items) [![Code Climate](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items/badges/gpa.svg)](https://codeclimate.com/github/bueltge/wp-rest-api-filter-items) [![License](https://poser.pugx.org/bueltge/wp-rest-api-filter-items/license)](https://packagist.org/packages/bueltge/wp-rest-api-filter-items)
 
-A WordPress plugin to filter [WordPress REST API](http://wp-api.org/) items for your request. Removing Content From WP API Response on your request.
+A WordPress plugin to filters [WordPress REST API](http://wp-api.org/) items for your request. Its removing key and values from WP API response on your request.
 
 ## Description
-Per default, a post via WordPress REST API would fetch all data in `wp-json/wp/v2/posts`. For many reasons you might want to exclude certain fields from WP API response in certain circumstances. This plugin enables you to filter your request for fields you require. Add items to the `GET` attribute on the url, like `wp-json/wp/v2/posts?items=id,title,content` in order to get only according field values.
+Per default, a post via WordPress REST API would fetch all data in `wp-json/wp/v2/posts`. For many reasons, you might want to exclude certain fields from WP API response in certain circumstances. This plugin enables you to filter your request for fields you require. Add items to the `GET` attribute on the url, like `wp-json/wp/v2/posts?items=id,title,content` in order to get only according field values.
 
-The plugin supports currently the filtering of post, taxonomy and comments.
+The plugin currently supports the filtering of post, taxonomy and comments.
 
 ## WP-API Versions
  * __Use the branch [`wp-api-v1`](tree/wp-api-v1) if you use WP-API Version 1.__
